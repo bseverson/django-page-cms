@@ -284,7 +284,7 @@ class PageAdmin(admin.ModelAdmin):
             if addlanguage:
                 from six.moves import urllib
                 try:
-                    splitted = list(urllib.parse.urlparse(response.url))
+                    splitted = list(urllib.parse.urlparse(response.url)
                 except:
                     splitted = list(urllib.parse.urlparse(response['location'])
                 query = urllib.parse.parse_qs(splitted[4])
